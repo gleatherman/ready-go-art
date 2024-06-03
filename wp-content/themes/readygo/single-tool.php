@@ -9,11 +9,7 @@
 					<h2 class="text-dark">Request a Booking</h2>
 					<div class="row">
 						<div class="col col-8">
-							<?php
-							if ( function_exists( 'ninja_forms_display_form' ) ) {
-								ninja_forms_display_form( 5 );
-							}
-							?>
+						<?php echo do_shortcode( '[ninja_form id=5]' ); ?>
 						</div>
 						<div class="col col-4"></div>
 					</div>
@@ -58,7 +54,7 @@
 					<div class="sidebar-contact">
 						<a class="btn btn-shadow" href="<?php echo $_SERVER['REQUEST_URI'] ?>request/">request a
 							booking</a>
-						<a href="http://www.addthis.com/bookmark.php" class="addthis_button" ><b>share</b></a>
+						<!-- <a href="http://www.addthis.com/bookmark.php" class="addthis_button" ><b>share</b></a> -->
 					</div>
 					<div class="artist">
 						<?php echo get_avatar( get_field( 'artist_email_address' ), 40 ); ?>
