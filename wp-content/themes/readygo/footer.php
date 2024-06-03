@@ -49,7 +49,7 @@
             </span>
         </div>
     </footer>
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57e02817a48e60a1"></script>
+    
     <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/vendor/jquery-2.2.4.min.js" type="text/javascript"></script>
     <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/main.js" type="text/javascript"></script>
     <?php wp_footer(); ?>
