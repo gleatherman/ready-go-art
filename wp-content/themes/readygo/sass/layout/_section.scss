@@ -1,0 +1,67 @@
+.section {
+  padding: $base-spacing;
+
+  &.section-blue {
+    background: $light-blue;
+    color: $blue;
+    font-size: 18px;
+    font-weight: bold;
+
+    .home & {
+      margin: 0 0 ($base-spacing * 2);
+      padding: ($base-spacing * 2) $base-spacing;
+
+      select {
+        margin: 0 ($small-spacing / 2);
+      }
+    }
+
+    select {
+      background: url('./img/chevron-down.png') center right no-repeat;
+      background-size: 10px;
+      border: none;
+      border-bottom: 2px solid $red;
+      color: $red;
+      display: inline-block;
+      font-weight: normal;
+      margin: 0 $base-spacing 0 0;
+      padding: ($small-spacing / 2) ($small-spacing * 1.5) ($small-spacing / 2) 0;
+      min-width: 170px;
+      max-width: 170px;
+
+      &.dirty {
+        font-weight: bold;
+      }
+
+      option:disabled {
+        color: #000;
+        font-weight: bold;
+      }
+    }
+
+    input[type="submit"] {
+      margin: 0 0 0 $base-spacing;
+    }
+  }
+
+  &.section-center {
+    text-align: center;
+  }
+
+  &.section-no-padding {
+    padding: 0 $base-spacing;
+  }
+
+  .wp-post-image {
+    width: 100%;
+    height: auto;
+  }
+
+  p {
+    line-height: 1.5;
+  }
+
+  .section-inner {
+    @include outer-container;
+  }
+}

@@ -1,0 +1,54 @@
+#{$all-buttons},
+.btn {
+  appearance: none;
+  background-color: $red;
+  border: 0;
+  border-radius: $base-border-radius;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $base-font-family;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1;
+  padding: $small-spacing ($base-spacing * 1.75);
+  text-decoration: none;
+  transition: background-color $base-duration $base-timing;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &:hover,
+  &:focus {
+    background-color: shade($red, 10%);
+    color: #fff;
+  }
+
+  &:active {
+    background-color: shade($action-color, 20%);
+    color: #fff;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+
+    &:hover {
+      background-color: $action-color;
+    }
+  }
+
+  &.btn-alt {
+    background: #fff;
+    color: $red;
+  }
+
+  &.btn-block {
+    text-align: center;
+    width: 100%;
+  }
+
+  &.btn-shadow {
+    box-shadow: -3px 3px 0 0 rgba(0, 0, 0, 0.08);
+  }
+}

@@ -1,0 +1,21 @@
+.mobile-menu {
+  display: none;
+
+  ul {
+    li {
+      a {
+        background: $blue;
+        color: #fff;
+        display: block;
+        font-size: 14px;
+        font-weight: bold;
+        margin: 0 0 1px;
+        padding: $base-spacing;
+      }
+    }
+  }
+
+  @include media($medium-screen) {
+    display: none !important;
+  }
+}

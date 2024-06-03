@@ -1,0 +1,14 @@
+.sidebar {
+  .sidebar-copy {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .sidebar-contact {
+    margin: $base-spacing 0;
+
+    .btn {
+      margin-right: $base-spacing;
+    }
+  }
+}

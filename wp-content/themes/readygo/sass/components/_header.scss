@@ -1,0 +1,44 @@
+.header {
+  align-items: center;
+  background: $red;
+  display: flex;
+  height: 80px;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+
+  @include media($medium-screen) {
+    background: none;
+    border-bottom: 1px solid $light-gray;
+    height: auto;
+
+    .home &,
+    .single-collection &,
+    .single-post & {
+      border: none;
+    }
+  }
+
+  .header-brand {
+    img {
+      display: block;
+    }
+
+    @include media($medium-screen) {
+      display: none;
+    }
+  }
+
+  .header-ss-right {
+    align-items: center;
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: $base-spacing;
+    bottom: 0;
+
+    @include media($medium-screen) {
+      display: none;
+    }
+  }
+}

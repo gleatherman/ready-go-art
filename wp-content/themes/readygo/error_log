@@ -1,0 +1,3 @@
+[24-Jan-2017 22:43:59 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home3/springs0/public_html/readygoart/wp-content/themes/readygo/index.php on line 1
+[19-Mar-2017 02:49:35 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home3/springs0/public_html/readygoart/wp-content/themes/readygo/404.php on line 1
+[19-Mar-2017 10:18:20 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home3/springs0/public_html/readygoart/wp-content/themes/readygo/404.php on line 1

@@ -1,0 +1,50 @@
+.collection {
+  background-color: $medium-gray;
+  background-position: 50% 50%;
+  background-size: cover;
+  color: $blue;
+  display: block;
+  font-size: 15px;
+  font-weight: bold;
+  height: 235px;
+  margin: 0 0 $base-spacing;
+  position: relative;
+  transition: none;
+
+  .collection-info {
+    position: absolute;
+    top: ($base-spacing * 1.5);
+    left: ($base-spacing * 1.5);
+
+    .collection-title {
+      font-size: 32px;
+      line-height: 40px;
+    }
+
+    .collection-description {
+      line-height: 26px;
+      margin: 6px 0 0;
+    }
+
+    .collection-meta {
+      line-height: 26px;
+      margin: 4px 0 0;
+    }
+
+    span {
+      background: #fff;
+      box-shadow: 0 0 0 5px #fff;
+      overflow: hidden;
+      transition: all $base-duration $base-timing;
+    }
+  }
+
+  &:active,
+  &:focus,
+  &:hover {
+    span {
+      background: $light-blue;
+      box-shadow: 0 0 0 5px $light-blue;
+    }
+  }
+}

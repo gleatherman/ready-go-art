@@ -1,0 +1,14 @@
+.menu-btn {
+  padding: $small-spacing;
+
+  .menu-btn-line {
+    background: #fff;
+    margin: 3px 0 0;
+    height: 2px;
+    width: 18px;
+
+    &:first-child {
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.footer {
+  .footer-top {
+    background: $light-gray;
+    font-size: 14px;
+    margin: 6px 0;
+    outline: 4px solid $light-gray;
+    outline-offset: 2px;
+    padding: ($base-spacing * 1.5) $base-spacing;
+
+    .footer-social {
+      font-size: 24px;
+      text-align: right;
+    }
+  }
+
+  .footer-bottom {
+    align-items: center;
+    color: $medium-gray;
+    display: flex;
+    font-size: 13px;
+    justify-content: center;
+    margin: ($base-spacing * 1.25) 0;
+    padding: 0 $base-spacing;
+    
+    a {
+      display: inline-block;
+      margin: 0 $base-spacing;
+      vertical-align: middle;
+    }
+  }
+
+  .footer-col-header {
+    color: $blue;
+    font-weight: bold;
+  }
+
+  ul {
+    li {
+      margin: 0 0 $small-spacing;
+    }
+  }
+}

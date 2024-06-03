@@ -1,0 +1,22 @@
+.posts {
+  .post {
+    display: flex;
+    margin: 0 0 $base-spacing;
+
+    .post-image {
+      display: block;
+      margin: 0 $base-spacing 0 0;
+      min-width: 620px;
+      width: auto;
+    }
+
+    .post-description {
+      line-height: 1.4;
+    }
+
+    .post-meta {
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+}

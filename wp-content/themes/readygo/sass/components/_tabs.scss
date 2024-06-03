@@ -1,0 +1,31 @@
+.tabs {
+  .tabs-top {
+    display: flex;
+    margin: $base-spacing 0;
+  }
+
+  .tab {
+    color: $blue;
+    display: block;
+    font-weight: bold;
+    margin: 0 $small-spacing 0 0;
+    padding: $small-spacing $base-spacing;
+    transition: background $base-duration $base-timing;
+
+    &:hover,
+    &:focus {
+      background: $blue;
+      color: #fff;
+    }
+
+    &.tab-active {
+      background: $red;
+      color: #fff;
+    }
+  }
+
+  .tab-content {
+    @extend .wysiwyg;
+    display: none;
+  }
+}

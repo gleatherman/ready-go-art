@@ -1,0 +1,65 @@
+.nav {
+  display: none;
+  font-size: 17px;
+  font-weight: bold;
+  padding: $base-spacing;
+  position: relative;
+  text-transform: lowercase;
+  white-space: nowrap;
+
+  @include media($medium-screen) {
+    display: block;
+    width: 100%;
+  }
+
+  .menu-navigation-menu-container {
+    @include outer-container;
+  }
+
+  ul {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    li {
+      flex: 1;
+      text-align: center;
+
+      a {
+        background: $blue;
+        color: #fff;
+        display: block;
+        margin: 0 3px;
+        padding: $small-spacing $base-spacing;
+
+        &:active,
+        &:focus,
+        &:hover {
+          color: shade(#fff, 10%);
+        }
+      }
+
+      &.current-menu-item {
+        a {
+          color: #fff;
+          background: $blue;
+        }
+      }
+
+      &.home {
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+
+        a {
+          background: url(./img/logo@2x.png) center center no-repeat;
+          background-size: cover;
+          height: 60px;
+          margin: 0 auto;
+          padding: 0;
+          width: 113px;
+        }
+      }
+    }
+  }
+}
