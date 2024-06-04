@@ -25,7 +25,7 @@ function readygo_init() {
 function add_current_nav_class( $classes, $item ) {
 	global $post;
 	$current_post_type      = get_post_type_object( get_post_type( $post->ID ) );
-	$current_post_type_slug = $current_post_type->rewrite[ slug ];
+	$current_post_type_slug = $current_post_type->rewrite[ 'slug' ];
 	$menu_slug              = strtolower( trim( $item->url ) );
 	if ( strpos( $menu_slug, $current_post_type_slug ) !== false ) {
 		$classes[] = 'current-menu-item';
@@ -169,15 +169,30 @@ function custom_post_type_sub_page_urls() {
 	flush_rewrite_rules();
 }
 
-function filter_fetch_jid( $data, $field_id ) {
-	if ( $field_id == 16 ) {
-		global $post;
-		$artist_email          = get_field( 'artist_email_address', $post->ID );
-		$data['default_value'] = $artist_email;
-	}
+// function filter_fetch_jid( $data, $field_id ) {
+// 	if ( $field_id == 16 ) {
+// 		global $post;
+// 		$artist_email          = get_field( 'artist_email_address', $post->ID );
+// 		$data['default_value'] = $artist_email;
+// 	}
 
-	return $data;
+// 	return $data;
+// }
+
+/**
+ * Populate hidden input with ACF values
+ */
+function nf_hidden_field_values( $value, $field_type, $field_settings ) {
+    global $post;
+    $value = '';
+    if ( $field_settings['key'] == 'hidden_16' ) {
+        $value = get_field('artist_email_address', $post->ID);
+    }
+
+    return $value;
 }
+add_filter( 'ninja_forms_render_default_value', 'nf_hidden_field_values', 10, 3 );
+
 
 function get_custom_taxonomy_list( $post_id, $type ) {
 	$terms = get_the_terms( $post_id, $type );
